@@ -1,0 +1,256 @@
+body{
+  font-family: "Open Sans", sans-serif;
+}
+
+.head{ 
+  background-color: #202C45;
+}
+
+.line{
+  border-right: 2px solid white;
+}
+
+.animeBg{
+  overflow: hidden;
+  background-color: #f2184f;
+}
+
+.anime{
+  animation: rightToLeft 15s infinite linear;
+}
+
+@keyframes rightToLeft{
+  from{
+    transform: translateX(100%); 
+  }
+  to{
+    transform:  translateY(0); 
+  }
+}
+
+.logo img{
+  width: 100%;
+  height: auto;
+}
+
+.submenu{
+  position: absolute;
+  transform-origin: top;
+  transform: scaleY(0);
+  visibility: hidden;
+  opacity: 0;
+  color: gray;
+  font-weight: 500;
+  background: white;
+  border: 1px solid;
+  width: 200px;
+  border-top: 3px solid black;
+  z-index: 10;
+}
+
+.submenu li{
+  border-bottom: 1px solid gray;
+  padding: 10px;
+}
+
+.submenu li:hover{
+  border-left: 4px solid #202C45;
+  transition: all 0.1s ease-out;
+  transform: scaleX(1);
+}
+
+li:hover > .submenu{
+  transform: none;
+  visibility: visible;
+  opacity: 1;
+transition: all 0.2s ease-in;
+}
+
+.sub-menu-right{
+  position: absolute;
+  left: 100%;
+  top: 0;
+  width: 100%;
+}
+
+.menu{
+  padding: 8px 20px;
+  border-radius: 30px;
+}
+
+.menu:hover{
+  background-color: #202C45;
+  color: white;
+  transition: all 0.2s ease;
+}
+
+.accordion {
+  list-style-type: none;
+  padding: 0;
+  /* max-width: 300px; */
+  background-color: #333333;
+}
+
+/* .accordion-item {
+  margin-bottom: 1rem;
+} */
+
+.accordion-toggle {
+  display: none;
+}
+
+.accordion-header {
+  /* background-color: #f8f9fa; */
+  color: white;
+  border-bottom: 1px solid #ddd;
+  /* border-radius: 0.25rem; */
+  /* padding: 0.75rem 1.25rem; */
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+label{
+  padding: 12px 20px;
+}
+
+.accordion-content {
+  display: none;
+  border-top: none;
+  
+  /* background-color: #ffffff; */
+}
+
+.accordion-content li {
+  padding: 10px 25px 10px 40px;
+  border-bottom: 1px solid white;
+}
+
+.accordion-content a {
+  color: white;
+  text-decoration: none;
+}
+
+.accordion-content a:hover {
+  text-decoration: underline;
+}
+
+.accordion-toggle:checked + .accordion-header + .accordion-content {
+  display: block;
+}
+
+.accordion-header i {
+  transition: transform 0.3s ease;
+}
+
+.accordion-toggle:checked + .accordion-header i {
+  transform: rotate(180deg);
+}
+
+.accordion-item {
+  margin-top: 0.5rem;
+}
+
+.hamburger{
+  position: absolute;
+  top: 0;
+  right: 0;
+  background-color: #333333;
+  width: 70%;
+  height: auto;
+  z-index: 30;
+}
+
+
+
+@media(max-width:640px){
+  .anime{
+    animation: rightToLeft 5s infinite linear;
+  }
+}
+
+#app{
+  height: 100%;
+}
+
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+
+.one{
+  background-image: url(./images/Designer.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.one h1,.two h1,.three h1{
+  font-size: 8rem;
+  font-weight: bold;
+  color: white;
+}
+
+.one span{
+  background-color: #202C45;
+  font-size: 2rem;
+  padding: 14px 19px;
+  font-weight: bold;
+  color: white;
+  border-left:5px solid #f2184f;
+}
+
+.one button,.two button,.three button{
+  background-color: #f2184f;
+  padding: 11px 37px;
+  color: white;
+}
+
+.one button:hover,.two button:hover,.three button:hover{
+  background-color: #f35079;
+}
+
+.two{
+  background-image: url(./images/Designer2.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.two span{
+  background-color: #202C45;
+  font-size: 2rem;
+  padding: 14px 30px;
+  font-weight: bold;
+  color: white;
+  border-radius: 3rem;
+  border-right: 5px solid #f2184f;
+  border-left: 5px solid #f2184f;
+}
+
+.three{
+  background-image: url(./images/Designer3.jpeg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.three span{
+  background-color: #202C45;
+  font-size: 2rem;
+  padding: 14px 19px;
+  font-weight: bold;
+  color: white;
+  border-right:5px solid #f2184f;
+}
+
+@media(max-width:680px){
+  .one h1,.two h1,.three h1{
+    font-size: 4rem;
+  }
+  .one span,.two span,.three span{
+    font-size: 1rem;
+  }
+}
